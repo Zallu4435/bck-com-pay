@@ -93,7 +93,7 @@ const TransactionHistory = () => {
             {transactions.map((tx) => (
               <tr key={tx._id} className="hover:bg-gray-700 transition-all duration-300">
                 <td className="py-6 px-8 border-b border-gray-600 text-xl md:text-2xl">{tx.name}</td>
-                <td className="py-6 px-8 border-b border-gray-600 text-xl md:text-2xl">${tx.amount}</td>
+                <td className="py-6 px-8 border-b border-gray-600 text-xl md:text-2xl">₹{tx.amount}</td>
                 <td className="py-6 px-8 border-b border-gray-600 text-xl md:text-2xl">
                   {new Date(tx.date).toLocaleDateString()}
                 </td>
