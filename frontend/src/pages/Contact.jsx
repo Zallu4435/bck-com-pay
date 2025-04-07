@@ -2,9 +2,9 @@
 import React from 'react';
 
 const contacts = [
-  { name: "John Doe", phone: "+91 98765 43210" },
-  { name: "Jane Smith", phone: "+91 87654 32109" },
-  { name: "Mike Johnson", phone: "+91 76543 21098" }
+  { name: "Murshasl Rashik", phone: "+91 98765 43210" },
+  { name: "Dilshihan", phone: "+91 87654 32109" },
+  { name: "Fidha", phone: "+91 76543 21098" }
 ];
 
 const Contact = () => {

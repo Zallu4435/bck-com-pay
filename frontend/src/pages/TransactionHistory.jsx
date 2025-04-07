@@ -11,7 +11,7 @@ const TransactionHistory = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/transactions');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}`);
         setTransactions(res.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ const TransactionHistory = () => {
   const handleStatusChange = async (id, newStatus) => {
     setUpdatingId(id);
     try {
-      await axios.put(`http://localhost:5000/api/transactions/${id}/status`, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/${id}/status`, {
         status: newStatus,
       });
 
@@ -47,7 +47,7 @@ const TransactionHistory = () => {
 
     setDeletingId(id);
     try {
-      await axios.delete(`http://localhost:5000/api/transactions/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/${id}`);
       setTransactions((prev) => prev.filter((tx) => tx._id !== id));
     } catch (err) {
       alert("Failed to delete transaction");

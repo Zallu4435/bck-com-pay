@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchDashboardStats = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/transactions/dashboard-stats');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/dashboard-stats`);
         setStats(res.data);
       } catch (err) {
         setError("Failed to load dashboard data");
